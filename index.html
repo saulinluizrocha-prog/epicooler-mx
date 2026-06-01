@@ -272,306 +272,81 @@
     .card-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--black); }
     .card-item p { font-size: 13px; font-weight: 300; color: #555; line-height: 1.6; }
 
-    /* ══════════════════════════════════════
-       PRICING SECTION
-    ══════════════════════════════════════ */
-    #precio {
-      background: #fff;
-      padding: 60px 20px 80px;
-    }
-
-    .pricing-wrap {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    /* Stock bar */
-    .stock-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      padding: 14px 20px;
-      margin-bottom: 14px;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    .stock-bar .stock-count { color: #e00; font-weight: 700; }
-
-    .stock-progress {
-      flex: 1;
-      height: 12px;
-      border-radius: 6px;
-      background: linear-gradient(to right, #76e66b 0%, #f5e300 45%, #ff5400 75%, #e0e0e0 75%);
-      min-width: 80px;
-    }
-
-    .stock-label { font-size: 14px; font-weight: 600; white-space: nowrap; }
-
-    /* Discount badge */
-    .discount-badge {
-      background: #eef2ff;
-      border: 1.5px solid #c5d0f8;
-      border-radius: 8px;
-      padding: 14px 20px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #333;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .discount-badge i { color: var(--blue); font-size: 20px; }
-
-    /* Section heading */
-    .pricing-title {
-      font-size: clamp(22px, 3vw, 28px);
-      font-weight: 700;
-      color: var(--black);
-      margin-bottom: 18px;
-    }
-
-    /* Package cards */
-    .package-card {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      border: 2px solid #ddd;
-      border-radius: 12px;
-      padding: 0;
-      margin-bottom: 14px;
-      cursor: pointer;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    .package-card:hover { border-color: var(--blue); }
-
-    .package-card.selected {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(25,96,255,0.12);
-      background: #f5f8ff;
-    }
-
-    /* Radio col */
-    .pkg-radio {
-      padding: 0 20px;
-      flex-shrink: 0;
-    }
-
-    .pkg-radio input[type="radio"] {
-      width: 20px; height: 20px;
-      accent-color: var(--blue);
-      cursor: pointer;
-    }
-
-    /* Product info col */
-    .pkg-info {
-      flex: 1;
-      padding: 22px 10px;
-      border-left: 1px solid #e0e0e0;
-      border-right: 1px solid #e0e0e0;
-    }
-
-    .pkg-qty {
-      font-size: clamp(28px, 4vw, 38px);
-      font-weight: 700;
-      color: var(--black);
-      line-height: 1;
-    }
-
-    .pkg-qty span { font-size: 16px; font-weight: 400; }
-    .pkg-name { font-size: 15px; font-weight: 400; color: #555; margin-top: 2px; }
-
-    /* Discount tag col */
-    .pkg-discount {
-      padding: 0 18px;
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    .discount-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      border: 1.5px solid #555;
-      border-radius: 6px;
-      padding: 6px 14px;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .discount-tag i { font-size: 13px; color: #333; }
-
-    /* Price col */
-    .pkg-price {
-      padding: 22px 22px 22px 14px;
-      text-align: right;
-      flex-shrink: 0;
-      min-width: 140px;
-    }
-
-    .pkg-old-price {
-      font-size: 14px;
-      color: #888;
-      text-decoration: line-through;
-    }
-
-    .pkg-current-price {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--black);
-    }
-
-    .pkg-current-price strong {
-      font-size: clamp(26px, 3.5vw, 36px);
-      font-weight: 700;
-    }
-
-    .pkg-current-price sup {
-      font-size: 16px;
-      font-weight: 600;
-      vertical-align: super;
-    }
-
-    .pkg-current-price sub {
-      font-size: 12px;
-      vertical-align: baseline;
-      color: #666;
-    }
-
-    .best-seller-badge {
-      display: inline-block;
-      background: var(--blue);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 5px 14px;
-      border-radius: 6px;
-      margin-top: 8px;
-      letter-spacing: 0.5px;
-    }
-
-    /* Checkout */
-    .checkout-label {
-      text-align: center;
-      font-size: 13px;
-      color: #888;
-      margin: 24px 0 10px;
-    }
-
-    .paypal-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      background: var(--paypal);
-      color: #003087;
-      font-family: var(--font);
-      font-size: 22px;
-      font-weight: 700;
-      padding: 18px 24px;
-      border-radius: 10px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s;
-      margin-bottom: 14px;
-    }
-
-    .paypal-btn:hover { opacity: 0.92; transform: translateY(-1px); }
-
-    .paypal-btn .pp-logo {
-      font-size: 26px;
-      font-style: italic;
-      font-weight: 800;
-    }
-
-    .card-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      background: #222;
-      color: #fff;
-      font-family: var(--font);
-      font-size: 16px;
-      font-weight: 600;
-      padding: 16px 24px;
-      border-radius: 10px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .card-btn:hover { background: #444; transform: translateY(-1px); }
-
-    .secure-badges {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 18px;
-      flex-wrap: wrap;
-    }
-
-    .secure-badge {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      color: #666;
-      font-weight: 500;
-    }
-
-    .secure-badge i { color: var(--green); font-size: 14px; }
-
-    /* ── FINAL CTA (before pricing) ── */
-    .pre-price-cta {
+    /* ── FINAL CTA ── */
+    .final-cta {
       background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
-      padding: 70px 40px;
+      padding: 80px 40px;
       text-align: center;
     }
 
-    .pre-price-cta h2 {
+    .final-cta h2 {
       font-size: clamp(24px, 3.5vw, 42px);
       font-weight: 700; color: var(--white);
       margin-bottom: 16px; line-height: 1.25;
     }
 
-    .pre-price-cta p {
+    .final-cta p {
       font-size: clamp(14px, 1.8vw, 20px);
-      color: #ccc; margin-bottom: 36px;
-      max-width: 700px; margin-left: auto; margin-right: auto;
+      color: #ccc;
+      max-width: 700px; margin: 0 auto 16px;
     }
 
-    .cta-btn-anchor {
+    /* Discount highlight pill */
+    .discount-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #1A7A21, #26a32e);
+      color: #fff;
+      font-size: clamp(18px, 2.2vw, 26px);
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+      letter-spacing: 0.4px;
+      box-shadow: 0 4px 20px rgba(26,122,33,0.4);
+    }
+
+    .discount-pill .pill-tag {
+      background: #fff;
+      color: #1A7A21;
+      font-size: clamp(13px, 1.4vw, 17px);
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .cta-btn-final {
       display: inline-block;
-      background: linear-gradient(135deg, #1960FF, #0040cc);
-      color: var(--white);
+      background: linear-gradient(135deg, #e8a800, #f5c200);
+      color: #111;
       font-family: var(--font);
-      font-size: clamp(18px, 2vw, 26px);
-      font-weight: 600;
+      font-size: clamp(17px, 2vw, 24px);
+      font-weight: 700;
       padding: 20px 60px;
       border-radius: 12px;
       text-decoration: none;
       transition: transform 0.2s, box-shadow 0.25s;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
+      box-shadow: 0 6px 28px rgba(245,194,0,0.35);
     }
 
-    .cta-btn-anchor:hover {
+    .cta-btn-final:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(25,96,255,0.45);
+      box-shadow: 0 12px 40px rgba(245,194,0,0.5);
     }
+
+    .urgency-note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .urgency-note i { color: #e00; font-size: 12px; }
 
     /* ── FOOTER ── */
     footer {
@@ -600,9 +375,8 @@
       .benefit-row, .benefit-row.reverse { flex-direction: column; padding: 20px; }
       .benefit-text { padding: 10px 0; max-width: 100%; }
       .benefit-img img { width: 80vw; margin: 0 auto; }
-      .package-card { flex-wrap: wrap; }
-      .pkg-price { min-width: auto; }
-      .stock-bar { flex-wrap: wrap; gap: 8px; }
+      .discount-pill { flex-direction: column; gap: 6px; }
+      .cta-btn-final { padding: 18px 30px; width: 100%; text-align: center; }
     }
   </style>
 </head>
@@ -630,9 +404,8 @@
         <li><i class="fas fa-check-circle"></i> Entrega 100% segura y con rastreo</li>
         <li><i class="fas fa-check-circle"></i> Te lo llevamos directo a tu puerta</li>
       </ul>
-      <!-- ANCHOR → pricing section -->
-      <a class="cta-btn" href="#precio">
-        🔥 ¡QUIERO MI PRECIO ESPECIAL HOY!
+      <a class="cta-btn" href="https://www.knownwalk.com/2GT22MM1/239BL1Q6/?uid=5439" target="_blank" rel="nofollow">
+        🔥 ¡QUIERO EL 60% DE DESCUENTO HOY!
       </a>
     </div>
     <div class="hero-img">
@@ -755,119 +528,34 @@
     </div>
   </div>
 
-  <!-- PRE-PRICE CTA -->
-  <section class="pre-price-cta">
+  <!-- FINAL CTA -->
+  <section class="final-cta">
     <h2>¿Ya estás listo para sentir la diferencia?</h2>
-    <p>Únete a los miles de personas que ya están disfrutando el EpiCooler. El descuento especial está disponible solo por tiempo limitado.</p>
-    <!-- ANCHOR → pricing section -->
-    <a class="cta-btn-anchor" href="#precio">
-      🛒 ¡VER PRECIO ESPECIAL AHORITA!
-    </a>
-  </section>
+    <p>Únete a los miles que ya están disfrutando el EpiCooler.<br>El descuento especial está disponible <strong style="color:#fff;">solo por tiempo limitado.</strong></p>
 
-  <!-- ══════════════════════════════════════
-       PRICING SECTION
-  ══════════════════════════════════════ -->
-  <section id="precio">
-    <div class="pricing-wrap">
-
-      <!-- Stock bar -->
-      <div class="stock-bar">
-        <span>Solo <span class="stock-count">96 artículos</span></span>
-        <div class="stock-progress"></div>
-        <span class="stock-label">¡Quedan en stock!</span>
+    <!-- Discount highlight -->
+    <div style="margin: 24px 0 32px;">
+      <div class="discount-pill">
+        <span>🔥 Descuento Especial</span>
+        <span class="pill-tag">60% OFF</span>
+        <span>Precio más bajo garantizado</span>
       </div>
-
-      <!-- Discount badge -->
-      <div class="discount-badge">
-        <i class="fas fa-tag"></i>
-        <span>Se ha aplicado tu descuento del <strong>60%</strong></span>
-      </div>
-
-      <!-- Title -->
-      <h2 class="pricing-title">Elige tu paquete</h2>
-
-      <!-- PACKAGE 1 -->
-      <div class="package-card" id="pkg1" onclick="selectPkg(1)">
-        <div class="pkg-radio">
-          <input type="radio" name="paquete" id="radio1" value="1" />
-        </div>
-        <div class="pkg-info">
-          <div class="pkg-qty">1<span>x</span></div>
-          <div class="pkg-name">EpiCooler</div>
-        </div>
-        <div class="pkg-discount">
-          <span class="discount-tag"><i class="fas fa-tag"></i> 50%</span>
-        </div>
-        <div class="pkg-price">
-          <div class="pkg-old-price">$275.98</div>
-          <div class="pkg-current-price">
-            <sup>$</sup><strong>137</strong><sup>.99</sup>
-            <sub>cada uno</sub>
-          </div>
-        </div>
-      </div>
-
-      <!-- PACKAGE 2 (default selected) -->
-      <div class="package-card selected" id="pkg2" onclick="selectPkg(2)">
-        <div class="pkg-radio">
-          <input type="radio" name="paquete" id="radio2" value="2" checked />
-        </div>
-        <div class="pkg-info">
-          <div class="pkg-qty">2<span>x</span></div>
-          <div class="pkg-name">EpiCooler</div>
-        </div>
-        <div class="pkg-discount">
-          <span class="discount-tag"><i class="fas fa-tag"></i> 60%</span>
-        </div>
-        <div class="pkg-price">
-          <div class="pkg-old-price">$554.95</div>
-          <div class="pkg-current-price">
-            <sup>$</sup><strong>110</strong><sup>.99</sup>
-            <sub>cada uno</sub>
-          </div>
-          <div><span class="best-seller-badge">MÁS VENDIDO</span></div>
-        </div>
-      </div>
-
-      <!-- Checkout label -->
-      <p class="checkout-label">Pago rápido</p>
-
-      <!-- PayPal button -->
-      <a class="paypal-btn" href="https://www.knownwalk.com/2GT22MM1/239BL1Q6/?uid=5439" target="_blank" rel="nofollow">
-        <span class="pp-logo">Pay<span style="color:#009cde;">Pal</span></span>
-      </a>
-
-      <!-- Credit card button -->
-      <a class="card-btn" href="https://www.knownwalk.com/2GT22MM1/239BL1Q6/?uid=5439" target="_blank" rel="nofollow">
-        <i class="fas fa-credit-card"></i>
-        O continuar pagando con tarjeta de crédito
-      </a>
-
-      <!-- Secure badges -->
-      <div class="secure-badges">
-        <div class="secure-badge"><i class="fas fa-lock"></i> Pago 100% seguro</div>
-        <div class="secure-badge"><i class="fas fa-shield-alt"></i> Garantía de 365 días</div>
-        <div class="secure-badge"><i class="fas fa-truck"></i> Envío rastreado</div>
-      </div>
-
     </div>
+
+    <a class="cta-btn-final" href="https://www.knownwalk.com/2GT22MM1/239BL1Q6/?uid=5439" target="_blank" rel="nofollow">
+      🛒 ¡QUIERO EL 60% DE DESCUENTO!
+    </a>
+
+    <p class="urgency-note">
+      <i class="fas fa-circle"></i>
+      Solo quedan <strong style="color:#fff;">96 unidades</strong> en stock — ¡no te quedes sin el tuyo!
+    </p>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <p>© 2026 EpiCooler México. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    function selectPkg(n) {
-      document.querySelectorAll('.package-card').forEach(function(c) {
-        c.classList.remove('selected');
-      });
-      document.getElementById('pkg' + n).classList.add('selected');
-      document.getElementById('radio' + n).checked = true;
-    }
-  </script>
 
 </body>
 </html>
