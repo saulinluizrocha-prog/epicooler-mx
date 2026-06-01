@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EpiCooler México — Enfría tu mundo, donde sea</title>
+  <meta name="description" content="EpiCooler: el miniaire acondicionado portátil más vendido del mundo. Refrigeración compacta para el hogar, oficina o donde vayas. ¡Aprovecha el descuento especial hoy!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1960FF;
+      --green: #2E7A36;
+      --black: #000;
+      --white: #fff;
+      --gray-bg: #F0F0F0;
+      --gold: #E8BF00;
+      --font: 'Poppins', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--black); overflow-x: hidden; }
+
+    /* ── TOP BANNER ── */
+    .top-banner {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      padding: 60px 40px 90px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1335px;
+      margin: 0 auto;
+    }
+
+    .hero-content { flex: 1 1 400px; max-width: 560px; }
+
+    .hero-badge {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-size: clamp(13px, 1.8vw, 18px);
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .divider-green {
+      width: 60px;
+      height: 3px;
+      background: var(--green);
+      border-radius: 3px;
+      margin-bottom: 22px;
+    }
+
+    .benefits-list {
+      list-style: none;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .benefits-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--black);
+    }
+
+    .benefits-list li i {
+      color: var(--blue);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: clamp(16px, 2vw, 24px);
+      font-weight: 500;
+      padding: 18px 48px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    .cta-btn:hover {
+      background: #1A7A21;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(26,122,33,0.35);
+    }
+
+    .hero-img { flex: 0 0 auto; }
+
+    .hero-img img {
+      width: clamp(260px, 40vw, 460px);
+      border-radius: 20px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── BRANDS BAR ── */
+    .brands-bar {
+      background: var(--black);
+      padding: 20px 40px;
+    }
+
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brands-grid img {
+      max-height: 40px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+
+    .brands-grid img:hover { opacity: 1; }
+
+    /* ── SECTION TITLE ── */
+    .section-title-wrap {
+      text-align: center;
+      padding: 70px 30px 30px;
+    }
+
+    .section-title-wrap h2 {
+      font-size: clamp(22px, 3.5vw, 42px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    .section-title-wrap p {
+      font-size: clamp(14px, 1.8vw, 21px);
+      font-weight: 400;
+      color: #444;
+    }
+
+    /* ── FEATURES 3-COL ── */
+    .features-wrap {
+      padding: 40px 40px 80px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .features-col {
+      flex: 1 1 200px;
+      max-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .features-center-img img {
+      width: clamp(180px, 28vw, 340px);
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--black);
+    }
+
+    .feature-item i { color: var(--gold); font-size: 22px; }
+
+    /* ── VIRAL SECTION ── */
+    .viral-section {
+      background: var(--gray-bg);
+      padding: 50px 30px 0;
+    }
+
+    .viral-header {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .viral-header h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .viral-header p {
+      font-size: clamp(15px, 1.8vw, 21px);
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    .divider-blue {
+      width: 80px;
+      height: 6px;
+      background: var(--blue);
+      border-radius: 4px;
+      margin: 0 auto 0;
+    }
+
+    /* ── BENEFIT ROWS ── */
+    .benefit-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      padding: 30px 40px;
+    }
+
+    .benefit-row.reverse { flex-direction: row-reverse; }
+
+    .benefit-row.bg-white { background: var(--white); }
+    .benefit-row.bg-gray { background: var(--gray-bg); }
+
+    .benefit-text {
+      flex: 1 1 340px;
+      max-width: 500px;
+      padding: 20px 30px;
+    }
+
+    .benefit-text h3 {
+      font-size: clamp(20px, 2.5vw, 30px);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    .benefit-text p {
+      font-size: clamp(14px, 1.6vw, 21px);
+      font-weight: 300;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .benefit-img {
+      flex: 0 0 auto;
+      max-width: 420px;
+    }
+
+    .benefit-img img {
+      width: clamp(220px, 32vw, 400px);
+      border-radius: 20px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── COMFORT SECTION ── */
+    .comfort-section {
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .comfort-section h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .comfort-section .sub {
+      font-size: clamp(14px, 1.8vw, 21px);
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    .comfort-section .desc {
+      font-size: clamp(14px, 1.5vw, 18px);
+      font-weight: 300;
+      color: #333;
+      max-width: 800px;
+      margin: 20px auto 40px;
+      line-height: 1.8;
+    }
+
+    /* ── CARDS GRID ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      background: var(--white);
+    }
+
+    .card-item {
+      padding: 30px 28px;
+      border: 1px solid #e8e8e8;
+      text-align: left;
+    }
+
+    .card-item .card-icon {
+      width: 52px;
+      height: 52px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 22px;
+      color: var(--blue);
+    }
+
+    .card-item h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+
+    .card-item p {
+      font-size: 13px;
+      font-weight: 300;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(24px, 3.5vw, 42px);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .final-cta p {
+      font-size: clamp(14px, 1.8vw, 20px);
+      color: #ccc;
+      margin-bottom: 36px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-btn-final {
+      display: inline-block;
+      background: linear-gradient(135deg, #1960FF, #0040cc);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: clamp(18px, 2vw, 26px);
+      font-weight: 600;
+      padding: 20px 60px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.25s;
+      letter-spacing: 0.5px;
+    }
+
+    .cta-btn-final:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(25,96,255,0.45);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 13px;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-content, .hero-img, .section-title-wrap, .benefit-text, .benefit-img {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { padding: 40px 20px 50px; flex-direction: column; text-align: center; }
+      .hero .divider-green { margin: 0 auto 22px; }
+      .benefits-list li { justify-content: flex-start; }
+      .brands-grid { grid-template-columns: repeat(3, 1fr); }
+      .features-wrap { flex-direction: column; align-items: center; }
+      .features-col { max-width: 100%; flex-direction: row; flex-wrap: wrap; gap: 12px; }
+      .benefit-row, .benefit-row.reverse { flex-direction: column; padding: 20px; }
+      .benefit-text { padding: 10px 0; max-width: 100%; }
+      .benefit-img img { width: 80vw; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BANNER -->
+  <div class="top-banner">
+    🔥 OFERTA ESPECIAL POR TIEMPO LIMITADO — OBTÉN DESCUENTO AHORA
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>N.° 1 MUNDIAL</span>
+        <span class="stars">★★★★½</span>
+        <span>CALIFICADO</span>
+      </div>
+      <h1>El EpiCooler del que todos hablan — y ahora tú también puedes tenerlo</h1>
+      <p class="hero-sub">Miles ya lo compraron — asegura el tuyo ahora con descuento exclusivo directo de fábrica, ¡antes de que sea tarde!</p>
+      <div class="divider-green"></div>
+      <ul class="benefits-list">
+        <li><i class="fas fa-check-circle"></i> Calidad Premium — Construido para durar</li>
+        <li><i class="fas fa-check-circle"></i> Envío ultrarrápido a todo el mundo</li>
+        <li><i class="fas fa-check-circle"></i> Entrega 100% segura y rastreada</li>
+        <li><i class="fas fa-check-circle"></i> Entregado directamente a tu puerta</li>
+      </ul>
+      <a class="cta-btn" href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966" target="_blank" rel="nofollow">
+        OBTENER PRECIO ESPECIAL HOY
+      </a>
+    </div>
+    <div class="hero-img">
+      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg" alt="EpiCooler — Enfriador portátil compacto" loading="eager" />
+    </div>
+  </section>
+
+  <!-- BRANDS BAR -->
+  <div class="brands-bar">
+    <div class="brands-grid">
+      <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marcas7.webp" alt="Marca parceira" loading="lazy" />
+      <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_6.svg" alt="Marca parceira" loading="lazy" />
+      <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_4.svg" alt="Marca parceira" loading="lazy" />
+      <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_2.svg" alt="Marca parceira" loading="lazy" />
+      <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_1.svg" alt="Marca parceira" loading="lazy" />
+      <img src="https://aluno.presselapp.com/wp-content/uploads/2026/04/3.3_marca_0.svg" alt="Marca parceira" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div class="section-title-wrap">
+    <h2>Un simple detalle que cambió la forma en que las personas usan las cosas en su día a día</h2>
+    <p>Práctico, inteligente y ya presente en miles de hogares — sin configuración complicada, sin curva de aprendizaje. Simplemente resultados inmediatos desde el primer día.</p>
+  </div>
+
+  <!-- FEATURES 3-COL -->
+  <div class="features-wrap">
+    <div class="features-col">
+      <div class="feature-item"><i class="far fa-star"></i><span>Listo para usar de inmediato</span></div>
+      <div class="feature-item"><i class="far fa-star"></i><span>Fácil de integrar</span></div>
+      <div class="feature-item"><i class="far fa-star"></i><span>Diseño moderno</span></div>
+      <div class="feature-item"><i class="far fa-star"></i><span>Funciona de forma intuitiva</span></div>
+    </div>
+    <div class="features-center-img">
+      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg" alt="EpiCooler" loading="lazy" />
+    </div>
+    <div class="features-col">
+      <div class="feature-item"><i class="far fa-star"></i><span>Construido para el uso diario</span></div>
+      <div class="feature-item"><i class="far fa-star"></i><span>Garantía de 365 días</span></div>
+      <div class="feature-item"><i class="far fa-star"></i><span>Diseño cómodo</span></div>
+      <div class="feature-item"><i class="far fa-star"></i><span>Versátil en distintas situaciones</span></div>
+    </div>
+  </div>
+
+  <!-- VIRAL SECTION HEADER -->
+  <div class="viral-section">
+    <div class="viral-header">
+      <h2>El EpiCooler se vuelve viral en todo el mundo</h2>
+      <p>Y ya forma parte de la rutina diaria de miles de personas</p>
+      <div class="divider-blue"></div>
+    </div>
+  </div>
+
+  <!-- BENEFIT ROW 1 -->
+  <div class="benefit-row bg-gray">
+    <div class="benefit-text">
+      <h3>Top Tendencias — Uno de los productos más comprados de los últimos días</h3>
+      <div class="divider-blue" style="margin:14px 0;"></div>
+      <p>El EpiCooler superó las 250.000 ventas en su lanzamiento — en menos de 24 horas.</p>
+    </div>
+    <div class="benefit-img">
+      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/3.3_imagem_beneficio_1.png" alt="EpiCooler Top Ventas" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- BENEFIT ROW 2 -->
+  <div class="benefit-row bg-white reverse">
+    <div class="benefit-text">
+      <h3>El producto más recomendado por influencers en todo el mundo en redes sociales</h3>
+      <div class="divider-blue" style="margin:14px 0;"></div>
+      <p>Miles de creadores y micro-celebridades se apresuran a obtener su EpiCooler — y publican sobre él todos los días.</p>
+    </div>
+    <div class="benefit-img">
+      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/3.3_imagem_beneficio_2.png" alt="EpiCooler Influencers" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- BENEFIT ROW 3 -->
+  <div class="benefit-row bg-gray" style="padding: 80px 40px;">
+    <div class="benefit-text">
+      <h3>Y sin duda — El producto N.° 1 en su categoría en este momento</h3>
+      <div class="divider-blue" style="margin:14px 0;"></div>
+      <p>Cumple todos los criterios: diseño moderno, aplicación sin esfuerzo, construcción ligera — y sobre todo 100% funcional. Exactamente lo que el mercado esperaba.</p>
+    </div>
+    <div class="benefit-img">
+      <img src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg" alt="EpiCooler N°1" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- COMFORT SECTION -->
+  <div class="comfort-section">
+    <h2>El producto para mayor comodidad en días calurosos</h2>
+    <p class="sub">Refrigeración compacta para casa, oficina o donde vayas</p>
+    <div class="divider-blue" style="margin:14px auto;"></div>
+    <p class="desc">La gente no solo compra el EpiCooler — se enamora de él. Ya sea como regalo, mejora personal o solución a un problema cotidiano, se integra perfectamente en cualquier estilo de vida. Por eso siempre está agotado.</p>
+
+    <!-- CARDS GRID -->
+    <div class="cards-grid">
+      <div class="card-item">
+        <div class="card-icon"><i class="fas fa-award"></i></div>
+        <h4>La mejor tecnología</h4>
+        <p>Fabricado con materiales de alta calidad que cumplen con los estándares internacionales de calidad.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Materiales certificados</h4>
+        <p>Cada pieza es certificada y probada para garantizar durabilidad y seguridad de uso.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon"><i class="fas fa-bolt"></i></div>
+        <h4>Eficiencia energética</h4>
+        <p>Diseñado para máximo rendimiento con mínimo consumo de energía.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon"><i class="fas fa-star"></i></div>
+        <h4>Diseño premiado</h4>
+        <p>Reconocido internacionalmente por su estética moderna y funcional.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <h2>¿Listo para sentir la diferencia?</h2>
+    <p>Únete a los miles que ya disfrutan del EpiCooler. Descuento especial disponible solo por tiempo limitado.</p>
+    <a class="cta-btn-final" href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966" target="_blank" rel="nofollow">
+      🛒 OBTENER PRECIO ESPECIAL HOY
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EpiCooler México. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
