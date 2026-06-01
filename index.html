@@ -889,7 +889,204 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 EpiCooler México. Todos los derechos reservados.</p>
+    <!-- ═══════════════════════════════════════════════════════
+  SECCIÓN E-E-A-T — Insertar ANTES del <footer> existente
+  EpiCooler México
+═══════════════════════════════════════════════════════ -->
+
+<style>
+  /* ── E-E-A-T TRUST SECTION ── */
+  .eeat-section {
+    background: #f7f7f7;
+    border-top: 1px solid #e0e0e0;
+    padding: 48px 30px 36px;
+    text-align: center;
+  }
+
+  .eeat-title {
+    font-size: clamp(13px, 1.4vw, 15px);
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+  }
+
+  /* Trust badges row */
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .trust-badge i {
+    font-size: 16px;
+    color: #2E7A36;
+  }
+
+  .trust-badge i.blue { color: #1960FF; }
+  .trust-badge i.gold { color: #E8BF00; }
+
+  /* Stats row */
+  .eeat-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 36px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+  }
+
+  .eeat-stat {
+    flex: 1 1 180px;
+    padding: 22px 16px;
+    border-right: 1px solid #e0e0e0;
+    text-align: center;
+  }
+
+  .eeat-stat:last-child { border-right: none; }
+
+  .eeat-stat .stat-num {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    color: #000;
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .eeat-stat .stat-label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #777;
+    line-height: 1.4;
+  }
+
+  /* Institutional links */
+  .eeat-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin-bottom: 20px;
+  }
+
+  .eeat-links a {
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .eeat-links a:hover {
+    color: #1960FF;
+    border-color: #1960FF;
+  }
+
+  .eeat-disclaimer {
+    font-size: 11px;
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .eeat-stat { flex: 1 1 140px; padding: 16px 10px; }
+    .trust-badge { font-size: 12px; padding: 8px 12px; }
+  }
+</style>
+
+<section class="eeat-section">
+
+  <p class="eeat-title">Tu compra está 100% protegida</p>
+
+  <!-- Trust Badges -->
+  <div class="trust-badges">
+    <div class="trust-badge">
+      <i class="fas fa-shield-alt"></i>
+      Pago 100% seguro
+    </div>
+    <div class="trust-badge">
+      <i class="fas fa-undo-alt"></i>
+      Garantía 30 días
+    </div>
+    <div class="trust-badge">
+      <i class="fas fa-truck blue"></i>
+      Envío gratis rastreado
+    </div>
+    <div class="trust-badge">
+      <i class="fas fa-star gold"></i>
+      +250,000 clientes
+    </div>
+    <div class="trust-badge">
+      <i class="fas fa-lock"></i>
+      Datos encriptados
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="eeat-stats">
+    <div class="eeat-stat">
+      <span class="stat-num">250K+</span>
+      <span class="stat-label">Unidades vendidas<br>en el mundo</span>
+    </div>
+    <div class="eeat-stat">
+      <span class="stat-num">4.5★</span>
+      <span class="stat-label">Calificación promedio<br>de clientes</span>
+    </div>
+    <div class="eeat-stat">
+      <span class="stat-num">30</span>
+      <span class="stat-label">Días de garantía<br>de reembolso</span>
+    </div>
+    <div class="eeat-stat">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Costo de envío<br>a todo México</span>
+    </div>
+  </div>
+
+  <!-- Institutional Links -->
+  <div class="eeat-links">
+    <a href="/politica-privacidad.html">Política de Privacidad</a>
+    <a href="/terminos-uso.html">Términos y Condiciones</a>
+    <a href="/politica-envios.html">Política de Envíos</a>
+    <a href="/politica-devoluciones.html">Política de Devoluciones</a>
+    <a href="/garantia.html">Garantía</a>
+    <a href="/contacto.html">Contacto</a>
+    <a href="/sobre-nosotros.html">Sobre Nosotros</a>
+  </div>
+
+  <p class="eeat-disclaimer">
+    EpiCooler México es un distribuidor autorizado. Los resultados pueden variar según el uso y las condiciones del ambiente.
+    Esta página contiene enlaces de afiliado. Los precios y el stock están sujetos a disponibilidad.
+    Tu información personal está protegida conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).
+  </p>
+
+</section>
   </footer>
 
 </body>
