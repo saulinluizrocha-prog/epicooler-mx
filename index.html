@@ -647,6 +647,58 @@
       box-shadow: 0 12px 40px rgba(245,194,0,0.5);
     }
 
+    /* ── PRICE BOX ── */
+    .price-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 36px;
+      display: inline-block;
+      text-align: center;
+      margin: 24px auto 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      min-width: 260px;
+    }
+    .price-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 18px;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    .price-old {
+      font-size: 22px;
+      color: #999;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+    .price-current {
+      font-size: clamp(42px, 6vw, 64px);
+      font-weight: 800;
+      color: #111;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .price-cents {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      vertical-align: super;
+    }
+    .price-unit {
+      font-size: 14px;
+      font-weight: 400;
+      color: #555;
+    }
+    .price-savings {
+      font-size: 14px;
+      color: #1A7A21;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
     .urgency-note {
       margin-top: 18px;
       font-size: 13px;
@@ -916,7 +968,7 @@
       <div class="feature-item"><i class="far fa-star"></i><span>Funciona de manera intuitiva al 100%</span></div>
     </div>
     <div class="features-center-img">
-      <img src="https://get-epicooler.topashopo.com/img/MV9IZXJvX0VwaWNvb2xlci1MQVRBTS0xLmpwZw-w_500.jpg" alt="EpiCooler" loading="lazy" />
+      <img src="https://get-epicooler.topashopo.com/img/Nl9FeHBlcnRfRXBpY29vbGVyLUxBVEFNLmpwZw-w_500.jpg" alt="EpiCooler" loading="lazy" />
     </div>
     <div class="features-col">
       <div class="feature-item"><i class="far fa-star"></i><span>Hecho para el uso rudo diario</span></div>
@@ -967,7 +1019,7 @@
       <p>Esta oferta es <strong>exclusiva y por tiempo limitado.</strong> Cuando se acaben las 96 unidades en stock, el precio regresa a su valor normal. Muchos ya se arrepintieron de esperar. <strong>No seas uno más.</strong> Pídelo hoy, recíbelo en casa con <strong>envío gratis</strong> — sin excusas, sin riesgos.</p>
     </div>
     <div class="benefit-img">
-      <img src="https://get-epicooler.topashopo.com/img/MV9IZXJvX0VwaWNvb2xlci1MQVRBTS0xLmpwZw-w_500.jpg" alt="EpiCooler N°1" loading="lazy" />
+      <img src="https://get-epicooler.topashopo.com/img/Ml9Nb2Rlc19FcGljb29sZXItTEFUQU0uanBn-w_500.jpg" alt="EpiCooler N°1" loading="lazy" />
     </div>
   </div>
 
@@ -1179,17 +1231,16 @@
     <h2>🔥 ¡Última llamada! El 60% de descuento se acaba hoy</h2>
     <p>Miles de mexicanos ya pidieron el suyo. Solo quedan <strong style="color:#fff;">96 unidades</strong> a este precio — después regresa a su valor normal.</p>
 
-    <!-- Discount highlight -->
-    <div style="margin: 24px 0 32px;">
-      <div class="discount-pill">
-        <span>🚚 Envío GRATIS incluido</span>
-        <span class="pill-tag">60% OFF</span>
-        <span>Precio más bajo garantizado</span>
-      </div>
+    <!-- Precio tachado -->
+    <div class="price-box">
+      <div class="price-badge">MÁS VENDIDO</div>
+      <div class="price-old">$554.95</div>
+      <div class="price-current">$110<span class="price-cents">.99</span> <span class="price-unit">cada uno</span></div>
+      <div class="price-savings">🎉 Ahorras $443.96 con el 60% OFF</div>
     </div>
 
     <a class="cta-btn-final" href="https://www.knownwalk.com/2GT22MM1/239BL1Q6/?uid=5439" target="_blank" rel="nofollow">
-      🛒 ¡QUIERO EL MÍO CON ENVÍO GRATIS!
+      🛒 ¡QUIERO EL MÍo CON ENVÍO GRATIS!
     </a>
 
     <p class="urgency-note">
