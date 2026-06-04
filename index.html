@@ -675,7 +675,146 @@
       animation: fadeUp 0.7s ease both;
     }
 
-    /* ── RESPONSIVE ── */
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      background: #fff;
+      padding: 70px 20px 60px;
+      text-align: center;
+    }
+    .how-inner { max-width: 1000px; margin: 0 auto; }
+    .how-section h2 {
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 700; color: var(--black); margin-bottom: 10px;
+    }
+    .how-sub { font-size: clamp(14px, 1.6vw, 18px); color: #555; margin-bottom: 48px; }
+    .how-steps {
+      display: flex; align-items: flex-start;
+      justify-content: center; gap: 10px; flex-wrap: wrap;
+    }
+    .how-step {
+      flex: 1 1 200px; max-width: 260px;
+      background: #f7f9ff;
+      border-radius: 16px; padding: 30px 24px;
+      text-align: center; position: relative;
+    }
+    .step-num {
+      position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+      background: var(--blue); color: #fff;
+      width: 32px; height: 32px; border-radius: 50%;
+      font-weight: 700; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-icon { font-size: 36px; color: var(--blue); margin-bottom: 14px; margin-top: 8px; }
+    .how-step h4 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+    .how-step p { font-size: 13px; color: #555; line-height: 1.6; }
+    .how-arrow {
+      font-size: 24px; color: #ccc;
+      align-self: center; padding: 0 4px; flex-shrink: 0;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section {
+      background: var(--gray-bg); padding: 70px 20px;
+      text-align: center;
+    }
+    .testimonials-section h2 {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700; color: var(--black); margin-bottom: 8px;
+    }
+    .test-sub { font-size: 16px; color: #555; margin-bottom: 40px; }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px; max-width: 1100px; margin: 0 auto 36px;
+    }
+    .test-card {
+      background: #fff; border-radius: 16px;
+      padding: 28px 24px; text-align: left;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .test-stars { color: var(--gold); font-size: 20px; letter-spacing: 2px; }
+    .test-text { font-size: 14px; color: #333; line-height: 1.7; font-style: italic; flex: 1; }
+    .test-author { display: flex; align-items: center; gap: 12px; }
+    .test-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), #0040cc);
+      color: #fff; font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .test-author strong { display: block; font-size: 14px; color: var(--black); }
+    .test-author span { font-size: 12px; color: #888; }
+    .test-rating-bar {
+      display: flex; align-items: center;
+      justify-content: center; gap: 20px;
+      background: var(--black); color: #fff;
+      max-width: 440px; margin: 0 auto;
+      border-radius: 12px; padding: 18px 28px;
+    }
+    .rating-big { font-size: 36px; font-weight: 700; color: var(--gold); }
+    .rating-info { display: flex; flex-direction: column; text-align: left; gap: 4px; }
+    .rating-info span:first-child { font-size: 15px; font-weight: 600; }
+    .rating-info span:last-child { font-size: 12px; color: #aaa; }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: #fff; padding: 70px 20px 60px;
+      text-align: center;
+    }
+    .faq-section h2 {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700; color: var(--black); margin-bottom: 8px;
+    }
+    .faq-sub { font-size: 16px; color: #555; margin-bottom: 36px; }
+    .faq-list { max-width: 760px; margin: 0 auto; text-align: left; }
+    .faq-item {
+      border-bottom: 1.5px solid #eee;
+    }
+    .faq-q {
+      width: 100%; background: none; border: none;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 4px; font-family: var(--font);
+      font-size: clamp(14px, 1.5vw, 16px);
+      font-weight: 600; color: var(--black);
+      cursor: pointer; text-align: left; gap: 12px;
+      transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--blue); }
+    .faq-q i { font-size: 14px; color: var(--blue); flex-shrink: 0; transition: transform 0.3s; }
+    .faq-q.open i { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s;
+      padding: 0 4px;
+    }
+    .faq-a.open { max-height: 200px; padding: 0 4px 18px; }
+    .faq-a p { font-size: 14px; color: #444; line-height: 1.8; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: #1a1a2e; padding: 28px 20px;
+    }
+    .trust-bar-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0; max-width: 900px; margin: 0 auto; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 28px; color: #fff;
+    }
+    .trust-item i { font-size: 24px; color: var(--gold); flex-shrink: 0; }
+    .trust-item span { font-size: 14px; font-weight: 600; line-height: 1.4; }
+    .trust-item small { font-size: 11px; color: #aaa; font-weight: 400; }
+    .trust-sep { width: 1px; height: 40px; background: #333; flex-shrink: 0; }
+
+    @media (max-width: 768px) {
+      .how-arrow { display: none; }
+      .how-step { max-width: 100%; }
+      .trust-sep { display: none; }
+      .trust-bar-inner { gap: 10px; }
+      .trust-item { padding: 10px 16px; }
+    }
     @media (max-width: 768px) {
       .hero { padding: 40px 20px 50px; flex-direction: column; text-align: center; }
       .hero .divider-green { margin: 0 auto 22px; }
@@ -859,6 +998,177 @@
         <div class="card-icon"><i class="fas fa-fire"></i></div>
         <h4>Precio más bajo del año</h4>
         <p>El 60% de descuento es una oferta de lanzamiento. Cuando se acaben las unidades, el precio regresa a su valor normal.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMO FUNCIONA -->
+  <div class="how-section">
+    <div class="how-inner">
+      <h2>¿Cómo funciona el EpiCooler?</h2>
+      <p class="how-sub">Tecnología de enfriamiento por evaporación — sin instalación, en 30 segundos</p>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-num">1</div>
+          <div class="step-icon"><i class="fas fa-tint"></i></div>
+          <h4>Agrega agua fría</h4>
+          <p>Llena el depósito con agua fría o hielo para potenciar el enfriamiento. Listo en segundos.</p>
+        </div>
+        <div class="how-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="how-step">
+          <div class="step-num">2</div>
+          <div class="step-icon"><i class="fas fa-plug"></i></div>
+          <h4>Conéctalo a cualquier USB</h4>
+          <p>Funciona con cualquier cargador, powerbank o laptop. Sin enchufes especiales ni instalación.</p>
+        </div>
+        <div class="how-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="how-step">
+          <div class="step-num">3</div>
+          <div class="step-icon"><i class="fas fa-snowflake"></i></div>
+          <h4>¡Siente el frío de inmediato!</h4>
+          <p>En menos de 30 segundos ya estás sintiendo aire frío. Sin ruido, sin complicaciones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIOS -->
+  <div class="testimonials-section">
+    <h2>Lo que dicen los que ya lo tienen</h2>
+    <p class="test-sub">Reseñas verificadas de clientes reales en México 🇲🇽</p>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Pensé que era un producto chafa de internet, pero le entré porque venía con envío gratis. Lo recibí en 5 días y desde entonces no se despega de mi escritorio. ¡El calor de la CDMX ya no me hace sufrir!"</p>
+        <div class="test-author">
+          <div class="test-avatar">MG</div>
+          <div><strong>María G.</strong><span>Ciudad de México</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Tengo un cuarto sin aire acondicionado y en verano es un horno. Lo pedí con desconfianza, pero llegó bien empaquetado y funciona increíble. Ya pedí uno más para mi mamá. Súper recomendado."</p>
+        <div class="test-author">
+          <div class="test-avatar">RH</div>
+          <div><strong>Roberto H.</strong><span>Guadalajara, Jalisco</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Soy mamá y lo compré para el cuarto de mis hijos. Llegan del colegio con ese calor horrible y ahora entran al cuarto fresco. Fue la mejor compra del verano, aunque ya estaba escéptica."</p>
+        <div class="test-author">
+          <div class="test-avatar">LC</div>
+          <div><strong>Lupita C.</strong><span>Monterrey, N.L.</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Lo llevo a la oficina todos los días. Mis compañeros me preguntan qué es y ya varios compraron el suyo. Discreto, sin ruido, y enfría de verdad. El 60% de descuento fue un regalazo."</p>
+        <div class="test-author">
+          <div class="test-avatar">JM</div>
+          <div><strong>Jorge M.</strong><span>Puebla</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="test-rating-bar">
+      <div class="rating-big">★ 4.8</div>
+      <div class="rating-info">
+        <span>Calificación promedio</span>
+        <span>basada en +12,000 reseñas verificadas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Resolvemos tus dudas antes de que las tengas</h2>
+    <p class="faq-sub">Las preguntas más frecuentes de nuestros clientes en México</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Es seguro comprar? ¿Cómo sé que me va a llegar?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>Totalmente seguro. Procesamos miles de pedidos en México con entrega rastreada. Recibirás un número de seguimiento para ver dónde está tu paquete en todo momento. El pago es encriptado y nunca guardamos tus datos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿El envío realmente es gratis? ¿No hay costos ocultos?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>Sí, el envío es 100% gratis a toda la República Mexicana. No hay letra chica, no hay cargos extras ni sorpresas. Lo que ves en la página es lo que pagas — ni un peso más.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Cuánto tarda en llegar a México?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>El tiempo promedio es de <strong>7 a 15 días hábiles</strong> según tu ciudad. CDMX, Guadalajara y Monterrey suelen recibir más rápido. Recibirás actualizaciones de tu envío por correo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿De verdad enfría o es solo un ventilador?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>El EpiCooler usa enfriamiento por evaporación — diferente a un ventilador normal. Al pasar el aire por el depósito de agua fría o hielo, baja la temperatura del aire que expulsa de manera real. Funciona mejor en espacios cerrados o semiabiertos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Consume mucha electricidad?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>Para nada. Funciona por USB — consume muchísimo menos que un aire acondicionado. Puedes conectarlo a una laptop, un cargador normal o un powerbank. Tu recibo de luz no va a cambiar.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Por qué está tan barato si es tan bueno?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>El 60% de descuento es una oferta directa de fábrica — sin intermediarios ni tiendas físicas que encarezcan el precio. Pero este precio <strong>no es permanente</strong>: cuando se acaben las 96 unidades disponibles, vuelve a precio regular.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <i class="fas fa-lock"></i>
+        <span>Pago 100% seguro<br><small>Encriptación SSL</small></span>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <i class="fas fa-shipping-fast"></i>
+        <span>Envío GRATIS<br><small>A toda la República</small></span>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Rastreo incluido<br><small>Sigue tu pedido siempre</small></span>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <i class="fas fa-headset"></i>
+        <span>Soporte dedicado<br><small>Aquí para ayudarte</small></span>
       </div>
     </div>
   </div>
@@ -1089,5 +1399,19 @@
 </section>
   </footer>
 
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-a.open').forEach(function(a) {
+        a.classList.remove('open');
+        a.previousElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+  </script>
 </body>
 </html>
